@@ -5,7 +5,8 @@ public enum Item
     Nothing,
     Spellbook,
     Potion,
-    Wand
+    Wand,
+    Start
 }
 
 /**
@@ -32,6 +33,7 @@ public class MazeCell
             Item.Potion => " ⚗",
             Item.Spellbook => " 🕮",
             Item.Wand => " ⚚",
+            Item.Start => " S",
             _ => ""
         };
 

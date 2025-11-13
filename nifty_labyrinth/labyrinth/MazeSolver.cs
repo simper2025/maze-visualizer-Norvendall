@@ -5,6 +5,7 @@ public class MazeSolver
     public List<NodeLink> ExploreMaze(MazeCell start)
     {
         List<NodeLink> retval = [];
+        start.WhatsHere = Item.Start;
 
         ExploreNode(start, retval);
 
