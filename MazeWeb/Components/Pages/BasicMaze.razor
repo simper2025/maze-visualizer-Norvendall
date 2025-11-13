@@ -1,0 +1,36 @@
+@page "/BasicMaze"
+@using labyrinth
+
+<PageTitle>Basic Maze Visualizer</PageTitle>
+
+<h1>Enter your name</h1>
+<input @bind="userName" />
+<button @onclick="generateMaze">Generate Basic Maze</button>
+
+@code
+{
+    string userName;
+
+    void generateMaze()
+    {
+        //bring over code from the Program.cs of the previous lab that generates the maze.
+        string YOUR_NAME = "Lucy Gerrard";
+
+        /* Change these constants to contain the paths out of your mazes. */
+        string PATH_OUT_OF_MAZE = "SEEENSWSESWWN";
+        string PATH_OUT_OF_TWISTY_MAZE = "ESNSSNENS";
+
+        MazeCell startLocation = MazeUtilities.mazeFor(YOUR_NAME);
+
+        /* Set a breakpoint here to explore your maze! */
+
+        if (MazeUtilities.isPathToFreedom(startLocation, PATH_OUT_OF_MAZE))
+        {
+
+        }
+        else
+        {
+
+        }
+    }
+}
